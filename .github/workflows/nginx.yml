@@ -1,0 +1,21 @@
+name: Build and Deploy
+
+on:
+  pull_request:
+   types: [closed]
+   branches: [main]
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Configure NGINX
+      run: |
+        sudo apt-get update
+        sudo apt-get install nginx
+        sudo rm /etc/nginx/sites-enabled/default
+        # sudo cp /path/to/nginx.conf /etc/nginx/sites-available/my-app
+        # sudo ln -s /etc/nginx/sites-available/my-app /etc/nginx/sites-enabled/
+        # sudo nginx -t
+        # sudo systemctl reload nginx
