@@ -1,0 +1,18 @@
+name: Triger Test
+
+on:
+  pull_request:
+   types: [closed]
+   branches: [main,beta,staging]
+
+  workflow_dispatch:
+
+jobs:
+  Trigger:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Display Information
+      run: |
+        echo "Yup your workflow is running!!!"
