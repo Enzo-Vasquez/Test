@@ -1,2 +1,2 @@
-# Test
-Test for nginx configuration
+# BETA Branch
+For BETA branch only
