@@ -3,7 +3,10 @@ name: Triger Test
 on:
   pull_request:
    types: [closed]
-   branches: [main,beta,staging]
+   branches:
+     - main
+     - beta
+     - staging
 
   workflow_dispatch:
 
