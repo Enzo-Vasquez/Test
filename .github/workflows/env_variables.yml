@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: Dev
     steps:
-      - name: Check
-        run: |
-          echo $DOCKER_REGISTRY
-          echo $DOCKER_REGISTRY_USERNAME
-          echo $DOCKER_REGISTRY_PASSWORD
+      - uses: actions/checkout@v3
+      - name: Python_Script
+        run: python test.py
+        continue-on-error: true
