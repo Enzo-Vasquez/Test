@@ -1,6 +1,4 @@
 name: Environment Variables
-
-environment: Dev
   
 on:
   workflow_dispatch:
@@ -8,6 +6,7 @@ on:
 jobs:
   TEST_ENV:
     runs-on: ubuntu-latest
+    environment: Dev
     steps:
       - name: Check
         run: |
