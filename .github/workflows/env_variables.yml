@@ -1,7 +1,6 @@
 name: Environment Variables
 
-env:
-  Dev
+environment: Dev
   
 on:
   workflow_dispatch:
