@@ -8,10 +8,10 @@ on:
   
 jobs:
   TEST_ENV:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Check
-      run: |
-        echo $DOCKER_REGISTRY
-        echo $DOCKER_REGISTRY_USERNAME
-        ECHO $DOCKER_REGISTRY_PASSWORD
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        run: |
+          echo $DOCKER_REGISTRY
+          echo $DOCKER_REGISTRY_USERNAME
+          ECHO $DOCKER_REGISTRY_PASSWORD
