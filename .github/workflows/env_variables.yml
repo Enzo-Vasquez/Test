@@ -13,4 +13,4 @@ jobs:
         run: |
           echo $DOCKER_REGISTRY
           echo $DOCKER_REGISTRY_USERNAME
-          ECHO $DOCKER_REGISTRY_PASSWORD
+          echo $DOCKER_REGISTRY_PASSWORD
