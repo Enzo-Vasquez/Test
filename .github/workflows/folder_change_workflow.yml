@@ -1,6 +1,10 @@
 name: Folder Change Workflow
 
 on:
+    pull_request:
+        types: [closed]
+        branches:
+          - main
     push:
         paths:
             - 'webapp/client/**'
