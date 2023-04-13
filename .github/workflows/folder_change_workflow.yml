@@ -18,9 +18,9 @@ jobs:
               id: changes-detected
               run: |
                 if git diff-tree --name-only --no-commit-id ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep -E 'webapp/client/(|.*\/)' > /dev/null; then
-                echo ::set-output name=changes-detected::true
+                echo "changes-detected::true" >> $GITHUB_OUTPUT
                 else
-                echo ::set-output name=changes-detected::false
+                echo "changes-detected::false" >> $GITHUB_OUTPUT
                 fi
 
             - name: Check_Steps
