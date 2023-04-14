@@ -18,9 +18,11 @@ jobs:
               id: changes-detected
               run: |
                 if git diff-tree --name-only --no-commit-id ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep -E 'webapp/client/(|.*\/)' > /dev/null; then
-                echo "changes-detected::true" >> $GITHUB_OUTPUT
+                echo "Changes detected in specific folder"
+                echo "::set-output name=changes-detected::true"
                 else
-                echo "changes-detected::false" >> $GITHUB_OUTPUT
+                echo "No changes detected in specific folder"
+                echo "::set-output name=changes-detected::false"
                 fi
 
             - name: Check_Steps
