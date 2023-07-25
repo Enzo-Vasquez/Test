@@ -1,0 +1,28 @@
+name: Reusable Workflow Test
+
+on:
+    workflow_call:
+        inputs:
+            environment:
+                required: true
+                type: string
+            secrets_vars:
+                required: true
+                type: string
+
+jobs:
+  build:
+    runs-on: self-hosted
+    environment: ${{ github.event.inputs.secrets_vars}}
+    steps:
+
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      - name: frontend build
+        run: |
+            echo "Environment you working is:"
+            echo "${{ github.event.inputs.environment }}"
+            echo "Secrets and Variable you working is:"
+            echo ${{ vars.REACT_APP_API_URL }}
