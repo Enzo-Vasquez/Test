@@ -20,9 +20,9 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: frontend build
+      - name: Check Value
         run: |
             echo "Environment you working is:"
-            echo "${{ github.event.inputs.environment }}"
+            echo ${{ github.event.inputs.environment }}
             echo "Secrets and Variable you working is:"
             echo ${{ vars.REACT_APP_API_URL }}
