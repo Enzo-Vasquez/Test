@@ -1,0 +1,11 @@
+name: Testing Reusable Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Development:
+    uses: ./.github/workflows/_reusable_workflow.yml
+    with:
+        environment: PROD
+        env_file: production
