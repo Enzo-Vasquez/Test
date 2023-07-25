@@ -13,7 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment }}
+    env: 
+        field: ${{ github.event.inputs.field }}
+        environment: ${{ github.event.inputs.environment }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -22,10 +24,6 @@ jobs:
       - name: Check Value
         run: |
           echo "Field you are working in is:"
-          echo ${{ github.event.inputs.field }}
+          echo $field
           echo "Environment your working on is:"
-          echo ${{ github.event.inputs.environment }}
-          echo "Variable value is:"
-          echo ${{ REACT_APP_API_URL[environment] }}
-
-environment: ${{ github.event.inputs.environment }}
+          echo $environment
