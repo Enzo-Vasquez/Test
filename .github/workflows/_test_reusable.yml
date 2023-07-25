@@ -9,5 +9,3 @@ jobs:
     with:
         field: development
         environment: DEV
-    secrets:
-      REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
