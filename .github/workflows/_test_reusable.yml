@@ -7,4 +7,7 @@ jobs:
   Development:
     uses: ./.github/workflows/_reusable_workflow.yml
     with:
-      environment: development
+        field: development
+        environment: DEV
+    secrets:
+      REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
