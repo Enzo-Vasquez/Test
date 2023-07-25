@@ -2,18 +2,11 @@ name: Reusable Workflow Test
 
 on:
   workflow_call:
-    inputs:
-      field:
-        required: true
-        type: string
-      environment:
-        required: true
-        type: string
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment }}
+    environment: DEV
     steps:
       - uses: actions/checkout@v3
         with:
@@ -21,9 +14,10 @@ jobs:
 
       - name: Check Value
         run: |
-          echo "Field you are working in is:"
-          echo ${{ github.event.inputs.field }}
-          echo "Environment your working on is:"
-          echo ${{ github.event.inputs.environment }}
-          echo "Variable value is:"
-          echo ${{ env.REACT_APP_API_URL }}
+          cat $env_file
+          cd webapp/client
+          ls -la ${{ github.workspace }}/webapp/client/.env.production
+          sed -i -e 's,ETBOX_API_ENV_URL,${{ vars.REACT_APP_API_URL }},g' ${{ github.workspace }}/webapp/client/.env.production
+          cat ${{ github.workspace }}/webapp/client/.env.production
+        env:
+            env_file: webapp/client/.env.production
