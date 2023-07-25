@@ -6,3 +6,5 @@ on:
 jobs:
   Development:
     uses: ./.github/workflows/_reusable_workflow.yml
+    with:
+        environment: DEV
