@@ -1,4 +1,4 @@
-name: Testing Reusable Workflow
+name: Test
 
 on:
   workflow_dispatch:
