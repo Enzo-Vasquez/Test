@@ -26,4 +26,6 @@ jobs:
           echo "Environment your working on is:"
           echo ${{ github.event.inputs.environment }}
           echo "Variable value is:"
-          echo ${{ vars.REACT_APP_API_URL[environment] }}
+          echo ${{ vars.REACT_APP_API_URL[vars.environment] }}
+            vars:
+                environment: ${{ github.event.inputs.environment }}
