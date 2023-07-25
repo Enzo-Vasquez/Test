@@ -21,4 +21,4 @@ jobs:
           echo "Environment you are working in is:"
           echo ${{ github.event.inputs.environment }}
           echo "Secrets and Variable you are working with is:"
-          echo ${{ secrets.REACT_APP_API_URL }}
+          echo ${{ vars.REACT_APP_API_URL }}
