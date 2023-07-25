@@ -20,7 +20,7 @@ jobs:
 
       - name: Check Value
         run: |
-          cat ${{ inputs.env_file}}
+          cat webapp/client/.env.${{ inputs.env_file}}
           cd webapp/client
           ls -la ${{ github.workspace }}/webapp/client/.env.${{ inputs.env_file}}
           sed -i -e 's,ETBOX_API_ENV_URL,${{ vars.REACT_APP_API_URL }},g' ${{ github.workspace }}/webapp/client/.env.${{ inputs.env_file}}
