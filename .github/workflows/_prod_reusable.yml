@@ -7,5 +7,5 @@ jobs:
   Production:
     uses: ./.github/workflows/_reusable_workflow.yml
     with:
-        environment: PROD
+        environment: prod
         env_file: production

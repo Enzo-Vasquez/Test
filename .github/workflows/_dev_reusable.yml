@@ -7,5 +7,5 @@ jobs:
   Development:
     uses: ./.github/workflows/_reusable_workflow.yml
     with:
-        environment: DEV
+        environment: dev
         env_file: development

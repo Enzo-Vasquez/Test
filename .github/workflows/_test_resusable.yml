@@ -7,5 +7,5 @@ jobs:
   Test:
     uses: ./.github/workflows/_reusable_workflow.yml
     with:
-        environment: TEST
+        environment: test
         env_file: test
