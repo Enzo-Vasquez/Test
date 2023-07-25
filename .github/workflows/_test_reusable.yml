@@ -1,11 +1,10 @@
 name: Testing Reusable Workflow
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-    Development:
-        uses: ./.github/workflows/_reusable_workflow.yml
-        with:
-            environment: development
-            secrets_vars: DEV
+  Development:
+    uses: ./.github/workflows/_reusable_workflow.yml
+    with:
+      environment: development
