@@ -6,9 +6,7 @@ on:
         environment:
             required: true
             type: string
-        env_file: 
-            required: true
-            type: string
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,4 +24,4 @@ jobs:
             sed -i -e 's,ETBOX_API_ENV_URL,${{ vars.REACT_APP_API_URL }},g' ${{ github.workspace }}/$env_file
             cat ${{ github.workspace }}/$env_file
         env:
-            env_file: webapp/client/.env.${{ inputs.env_file}}
+            env_file: webapp/client/.env.production

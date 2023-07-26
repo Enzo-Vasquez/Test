@@ -8,4 +8,3 @@ jobs:
     uses: ./.github/workflows/_reusable_workflow.yml
     with:
         environment: test
-        env_file: test
