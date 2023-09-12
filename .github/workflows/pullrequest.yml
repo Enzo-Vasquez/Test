@@ -1,0 +1,17 @@
+name: CI on Pull Request to Main
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run Code for PR Check
+        run: |
+            echo "Workflow works for PR Check"
