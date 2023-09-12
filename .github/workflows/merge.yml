@@ -1,0 +1,22 @@
+name: CI on Successful PR Merge to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Check if it's a merge to main
+        run: |
+          if [ "${GITHUB_REF}" == "refs/heads/main" ]; then
+            echo "This is a merge to the main branch."
+            echo "Add your build and test steps here"
+          else
+            echo "This is not a merge to the main branch. Skipping workflow."
+          fi
