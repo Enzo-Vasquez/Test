@@ -1,0 +1,16 @@
+name: PROD Release Published
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Production Deployment
+        run: |
+          echo "Prod release successfully published"
+          echo "Add your build and test steps here"
