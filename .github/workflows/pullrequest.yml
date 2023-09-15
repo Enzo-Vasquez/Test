@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Run Code for PR Check
+      - name: Test environment Pull Request Trigger
         run: |
-            echo "Workflow works for PR Check"
+            echo "Workflow works for Test environment Pull Request trigger"
