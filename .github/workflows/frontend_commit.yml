@@ -1,7 +1,11 @@
 name: CI on Dev Branch
 
 on:
+  workflow_dispatch:
   push:
+    branches:
+      - Development
+  pull_request:
     branches:
       - Development
 
