@@ -1,0 +1,17 @@
+name: CI on Dev Branch
+
+on:
+  push:
+    branches:
+      - Development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.head_commit.path.startsWith('webapp/client')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Commit to Development Works
+        run: |
+            echo "Commit to Development Branch works"
