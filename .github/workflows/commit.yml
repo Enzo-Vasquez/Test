@@ -1,9 +1,9 @@
-name: CI on Main Branch
+name: CI on Dev Branch
 
 on:
   push:
     branches:
-      - main
+      - Development
 
 jobs:
   build:
@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Run Code
+      - name: Commit to Development Works
         run: |
-            echo "Commit to Branch works"
+            echo "Commit to Development Branch works"
