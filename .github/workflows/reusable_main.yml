@@ -1,0 +1,10 @@
+name: Use Main Branch Reusable Workflow
+
+on:
+    workflow_dispatch:
+    
+jobs:
+    MainBranchReusable:
+        runs-on: ubuntu-latest
+        steps:
+            uses: .github/workflows/_reusable_workflow.yml@main
