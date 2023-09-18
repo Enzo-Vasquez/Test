@@ -1,0 +1,12 @@
+name: Main Branch Reusable Workflow
+
+on:
+    workflow_call:
+
+jobs:
+  MainReusable:
+    runs-on: self-hosted
+    steps:
+      - name: Main Branch Reusable workflow
+        run: |
+          echo "This is the main branch and your using the reusable workflow"
