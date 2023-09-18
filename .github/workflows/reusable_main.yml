@@ -5,6 +5,4 @@ on:
     
 jobs:
     MainBranchReusable:
-        runs-on: ubuntu-latest
-        steps:
-            uses: .github/workflows/_reusable_workflow.yml@main
+        uses: .github/workflows/_reusable_workflow.yml@main
