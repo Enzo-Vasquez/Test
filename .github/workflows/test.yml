@@ -1,0 +1,13 @@
+name: TEST Deployed
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  TEST_Deployed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test environment Deployed
+        run: |
+            echo "Workflow works for Test environment trigger"

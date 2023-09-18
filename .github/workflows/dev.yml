@@ -1,0 +1,15 @@
+name: DEV Deployed
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+jobs:
+  DEV_Deployed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Development Deployment
+        run: |
+          echo "DEV release successfully published"
+          echo "Add your build and test steps here"

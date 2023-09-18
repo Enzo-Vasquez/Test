@@ -1,4 +1,4 @@
-name: PROD Release Published
+name: PROD Deployed
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     types: [published]
 
 jobs:
-  build:
+  PROD_Deployed:
     runs-on: ubuntu-latest
 
     steps:
