@@ -2,7 +2,9 @@ name: Use Main Branch Reusable Workflow
 
 on:
     workflow_dispatch:
-    
+    push:
+        branches:
+            - development
 jobs:
     MainBranchReusable:
         uses: .github/workflows/_reusable_workflow.yml@main
