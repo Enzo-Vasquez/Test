@@ -7,4 +7,4 @@ on:
             - development
 jobs:
     MainBranchReusable:
-        uses: Enzo-Vasquez/Test/.github/workflows/_reusable_workflow.yml@main
+        uses: Enzo-Vasquez/Test/.github/workflows/_main_reusable.yml@main
